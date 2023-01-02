@@ -1,0 +1,333 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Render Haiku Cards",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/cardmaker.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "haiku-cards.db.json",
+                "--output", "haiku-cards.html",
+                "--css", "haiku-cards.css",
+                // "--scripts", "haiku-play.js",
+                "--exclude", "set=retired",
+                // "--include", "set=core-rules",
+                // "--include", "set=core",
+                // "--include", "set=gothic",
+                // "--include", "set=gothic-rules",
+                // "--include", "set=romantic",
+                // "--include", "set=romantic-rules",
+                // "--include", "set=silly",
+                "--include", "set=christmas",
+                "--include", "set=christmas-rules",
+                // "--exclude", "set=core-rules",
+                // "--no-backs", 
+                // "--shuffle",
+                // "--include", "for-testing=true",        // Test
+                // "--max-count", "1",                     // Test
+                "--sort", "set=core-rules,core,expanded,gothic,christmas,romantic,silly", 
+                "--sort", "template=blank-word,article,adjective,adverb,noun,verb", 
+                "--sort", "syllables", 
+                // "--sort", "word",
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Render Prayer Cards",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/cardmaker.js",
+            "cwd": "${workspaceFolder}/PrayingLots",
+            "args": [ 
+                "prayer-cards.db.json", 
+                "--css", "prayer-cards.css",
+                "--exclude", "omit=true",
+                "--exclude", "translation=KJV",
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Render Prayer Cards - Large Print",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/cardmaker.js",
+            "cwd": "${workspaceFolder}/PrayingLots",
+            "args": [ 
+                "prayer-cards-large-print.db.json", 
+                "--css", "prayer-cards.css",
+                "--exclude", "omit=true",
+                "--exclude", "translation=KJV"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Haiku Tune AI",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "--words", "haiku-words.append.json",
+                "--css", "haiku-cards.css", "haiku-play.css",
+                "--scripts", "haiku-play.js",
+
+                "--include", "set=core",
+                "--include", "set=expanded",
+                // "--include", "set=gothic",
+                // "--include", "set=romantic",
+                // "--include", "set=silly",
+                "--exclude", "template=pronoun",
+                "--exclude", "template=stativeverb",
+
+                "tune",
+                    "--html", "haiku-analysis.html",
+                    "--in-params", "haiku-parameters.json",
+                    "--out-params", "haiku-parameters-{RUN}.json",
+                    "--csv", "haiku-analysis.csv",
+
+                    "--gens", "200",
+                    "--mutation", "1.5",
+                    "--min-mutation", "0.15",
+                    "--genomes", "100",
+                    "--rounds", "8",
+                    "--players-per-game", "4",
+                    "--keep", "15",
+            ] 
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Haiku Tune, then Play",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "--words", "haiku-words.append.json",
+                "--css", "haiku-cards.css", "haiku-play.css",
+                "--scripts", "haiku-play.js",
+
+                "--include", "set=core",
+                "--include", "set=expanded",
+                // "--include", "set=gothic",
+                // "--include", "set=romantic",
+                // "--include", "set=silly",
+
+                "tuneplay",
+                    "--html", "haiku-analysis.html",
+                    // "--in-params", "haiku-parameters.json",
+                    "--out-params", "haiku-parameters.json",
+                    "--csv", "haiku-analysis.csv",
+
+                    "--gens", "400",
+                    "--mutation", "1.5",
+                    "--min-mutation", "0.15",
+                    "--genomes", "100",
+                    "--rounds", "8",
+                    "--players-per-game", "4",
+                    "--keep", "15",
+                    
+                    "--runs", "10000",
+                    "--players", "4",            
+            ] 
+        },        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Haiku - Generate Haiku",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "--words", "haiku-words.append.json",
+                "--css", "haiku-cards.css", "haiku-play.css",
+                "--scripts", "haiku-play.js",
+
+                "--include", "set=core",
+                "--include", "set=expanded",
+                // "--include", "set=gothic",
+                // "--include", "set=romantic",
+                // "--include", "set=silly",
+                // "--include", "set=christmas",
+
+                "haiku",
+                    "--html", "haiku-analysis.html",
+                    // "--params", "haiku-parameters.json",
+                    "--rules", "words-min"
+            ] 
+        },        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Haiku - Generate Sentence",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "--words", "haiku-words.append.json",
+                "--css", "haiku-cards.css", "haiku-play.css",
+                "--scripts", "haiku-play.js",
+                "--include", "set=core",
+                "--include", "set=expanded",
+                // "--include", "set=gothic",
+                // "--include", "set=romantic",
+                // "--include", "set=silly",
+                "--exclude", "template=pronoun",
+                "--exclude", "template=stativeverb",
+
+                "sentence",
+                    "--html", "haiku-analysis.html",
+            ] 
+        },        {
+            "type": "node",
+            "request": "launch",
+            "name": "Haiku Show Tableau",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "--words", "haiku-words.append.json",
+                "--css", "haiku-cards.css", "haiku-play.css",
+                "--scripts", "haiku-play.js",
+
+                "--include", "set=core",
+                // "--include", "set=expanded",
+                // "--include", "set=gothic",
+                // "--include", "set=romantic",
+                // "--include", "set=silly",
+                "--exclude", "template=pronoun",
+                "--exclude", "template=stativeverb",
+
+                "tableau",
+                    "--html", "haiku-analysis.html",
+            ] 
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Haiku Export Words",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "--words", "haiku-words.append.json",
+                "export",
+                    "--out", "haiku-words.append.json",
+            ] 
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Haiku Stats",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "--words", "haiku-words.append.json",
+                "--css", "haiku-cards.css", "haiku-play.css",
+
+                "--scripts", "haiku-play.js",
+                "--include", "set=core",
+                "--include", "set=expanded",
+                // "--include", "set=gothic",
+                // "--include", "set=romantic",
+                // "--include", "set=silly",
+                "--exclude", "template=pronoun",
+                "--exclude", "template=stativeverb",
+
+                "stats",
+                    "--csv", "haiku-stats-{DATE}.csv",
+            ] 
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Haiku Playtest",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
+            "cwd": "${workspaceFolder}/Haiku",
+            "args": [ 
+                "--words", "haiku-words.append.json",
+                "--include", "set=core",
+                "--include", "set=expanded",
+                // "--include", "set=gothic",
+                // "--include", "set=romantic",
+                // "--include", "set=silly",
+                "--exclude", "template=pronoun",
+                "--exclude", "template=stativeverb",
+                
+                "play",
+                    "--html", "haiku-analysis.html",
+                    // "--in-params", "haiku-parameters.json",
+                    "--csv", "haiku-analysis.csv",
+                    "--runs", "10000",
+                    "--players", "4",
+            ]
+        }
+        ,{
+            "type": "node",
+            "request": "launch",
+            "name": "Prayer Verse Export",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/PrayingLots/verse_converter.js",
+            "cwd": "${workspaceFolder}/PrayingLots",
+            "args": [ 
+                "export", 
+                    "--file", "verses-niv.txt",
+                    "--refsonly",
+
+                "--cards", "prayer-cards-niv.append.json",
+                "--normalize-refs", "niv-short",
+                // "--exclude", "translation=NIV"
+            ]
+       }
+       ,{
+            "type": "node",
+            "request": "launch",
+            "name": "Prayer Verse Import",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/PrayingLots/verse_converter.js",
+            "cwd": "${workspaceFolder}/PrayingLots",
+            "args": [ 
+                "import",
+                    "--verses", "verses-niv.db.txt",
+                    "--json", "prayer-cards-niv.append.json",
+
+                "--cards", "prayer-cards-niv.append.json",
+                "--normalize-refs", "niv-short",
+                // "--exclude", "translation=NIV"
+            ]
+        }
+    ]
+}
