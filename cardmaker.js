@@ -81,6 +81,14 @@ let countedCards = 0;
 let countedCardBacks = 0;
 let countedPages = 0;
 
+function stripJSONComments( data ) {
+    return data.replace( /\/\/(.*)/g,'');
+}
+
+function parseJSONWithComments( data ) {
+    return JSON.parse( stripJSONComments( data ));
+}
+
 function generateCardSetHtml( cardSet ) {
     const cardTemplates = loadCardTemplates( cardSet[ 'templates' ] );
 
@@ -99,8 +107,8 @@ function generateCardSetHtml( cardSet ) {
     const appendFileList = arrayFromValue( cardSet[ 'append' ] );
 
     for( const fileName of appendFileList ) {
-        const appendFileData = readFileSync( fileName );
-        const appendCards = JSON.parse( appendFileData );
+        const appendFileData = readFileSync( fileName,'utf8' );
+        const appendCards = parseJSONWithComments( appendFileData );
         cards = cards.concat( appendCards );
     }
 
@@ -177,8 +185,8 @@ function generateCardSetHtml( cardSet ) {
         const backRows  = [];
 
         for( let j = 0; j < pageRows; ++j ) {
-            frontRows.push( `<div class='page-row'>${cardHtmls.splice( 0, pageColumns ).join( '\n' )}</div>`);
-            backRows.push( `<div class='page-row'>${cardBackHtmls.splice( 0, pageColumns ).reverse().join( '\n')}</div>` );
+            frontRows.push( `<div class='page-row'>${cardHtmls.splice( 0, pageColumns ).join( '\n' )}\n</div> <!-- end row -->`);
+            backRows.push( `<div class='page-row'>${cardBackHtmls.splice( 0, pageColumns ).reverse().join( '\n')}\n</div> <!-- end row -->` );
         }
 
         pages.push( frontRows.join( '\n' ) );
@@ -215,13 +223,13 @@ function generateCardSetHtml( cardSet ) {
     return pages.length > 0 ? cardSetHtml : '';
 }
 
-readFile( cardDatabasePath, (err, cardDatabaseJson) => {
+readFile( cardDatabasePath, 'utf-8', (err, cardDatabaseJson) => {
     try {
         if (err) {
             throw( `Could not read card database path '${cardDatabasePath}'. ${err}. Aborting.` );
         }
 
-        const database = JSON.parse( cardDatabaseJson );
+        const database = parseJSONWithComments( cardDatabaseJson );
         const cardSets = Array.isArray( database ) ? database : database.sets;
         const dbAttributes = database[ 'db-attribs' ] ?? {};
 
