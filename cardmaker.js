@@ -14,37 +14,37 @@ const argv = yargs(process.argv.slice(2))
                         alias: 'o',
                         type: 'string'
                     })
-    .option( 'css', { 
-        description: 'Indicates one or more Cascading Style Sheets paths to <link> to in the output html.', 
+    .option( 'css', {
+        description: 'Indicates one or more Cascading Style Sheets paths to <link> to in the output html.',
         type: 'array'
     } )
     .option( 'scripts', {
-        description: 'Indicates one or more Javascript file paths to include in the output html.', 
+        description: 'Indicates one or more Javascript file paths to include in the output html.',
         type: 'array'
     })
-    .option( 'include', { 
+    .option( 'include', {
         description: 'Specifies an attribute and value in the form <attribute>=<match>. A card will be included only if it has this attribute with this value (or matches another "--include" specification (and is not otherwise excluded).',
         alias: 'i',
         type: 'string'
     } )
-    .option( 'exclude', { 
+    .option( 'exclude', {
         description: 'Specifies an attribute and value in the form <attribute>=<match>. A card will be excluded if it has this attribute with this value, even if it would otherwise be included.',
         alias: 'x',
         type: 'string'
     } )
-    .option( 'sort', { 
+    .option( 'sort', {
         description: 'Sorts cards in the database by the specified attribute. Prepend "^" to attribute to reverse this sort. Can specify multiple --sort directives in order to sort with priority. Specify a series of attribute values separated by commas (and no white space) to indicate a desired sort order (other than alphabetical, the default).',
         alias: 's',
         type: 'string'
     } )
-    .option( 'backs', { 
-        description: 'Emit card backs (the default). Use --no-backs to suppress card backs.', 
+    .option( 'backs', {
+        description: 'Emit card backs (the default). Use --no-backs to suppress card backs.',
         alias: 'b',
         default: true,
         type: 'boolean'
     } )
-    .option( 'shuffle', { 
-        description: 'Shuffle cards prior to sorting.', 
+    .option( 'shuffle', {
+        description: 'Shuffle cards prior to sorting.',
         alias: 'u',
         default: false,
         type: 'boolean'
@@ -58,7 +58,7 @@ const argv = yargs(process.argv.slice(2))
         type: 'number'
     } )
     .option( 'stat', {
-        description: 'Print the count of how many cards include the specified attribute with the specified regex value (or any value, if the regex value is left unspecified). Format: "<attribute>[=<regex>]"', 
+        description: 'Print the count of how many cards include the specified attribute with the specified regex value (or any value, if the regex value is left unspecified). Format: "<attribute>[=<regex>]"',
         type: 'string'
     })
     .strict()
@@ -121,7 +121,7 @@ function generateCardSetHtml( cardSet ) {
     }
 
     // Sort cards.
-    
+
     console.log( 'Sorting...' );
     sortCards( cards, sortProperties );
 
@@ -174,8 +174,8 @@ function generateCardSetHtml( cardSet ) {
 
     // Pagination
 
-    const pageColumns = setAttributes[ 'page-columns' ] ?? 3;
-    const pageRows = setAttributes[ 'page-rows' ] ?? 3;
+    const pageColumns = setAttributes[ 'page-columns' ];
+    const pageRows = setAttributes[ 'page-rows' ];
     const pageCardCount = pageColumns * pageRows;
 
     const pages = [];
@@ -184,9 +184,9 @@ function generateCardSetHtml( cardSet ) {
         const frontRows = [];
         const backRows  = [];
 
-        for( let j = 0; j < pageRows; ++j ) {
-            frontRows.push( `<div class='page-row'>${cardHtmls.splice( 0, pageColumns ).join( '\n' )}\n</div> <!-- end row -->`);
-            backRows.push( `<div class='page-row'>${cardBackHtmls.splice( 0, pageColumns ).reverse().join( '\n')}\n</div> <!-- end row -->` );
+        for( let j = 0; cardHtmls.length > 0 && j < (pageRows ?? 100000); ++j ) {
+            frontRows.push( `<div class='page-row'>${cardHtmls.splice( 0, pageColumns ?? cardHtmls.length ).join( '\n' )}\n</div> <!-- end row -->`);
+            backRows.push( `<div class='page-row'>${cardBackHtmls.splice( 0, pageColumns ?? cardBackHtmls.length ).reverse().join( '\n')}\n</div> <!-- end row -->` );
         }
 
         pages.push( frontRows.join( '\n' ) );

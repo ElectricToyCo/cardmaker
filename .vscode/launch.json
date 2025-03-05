@@ -12,30 +12,31 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/cardmaker.js",
-            "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "cwd": "/Users/jeffwofford/Documents/Haiku/cards",
+            "args": [
                 "haiku-cards.db.json",
-                "--output", "haiku-cards.html",
-                "--css", "haiku-cards.css",
+                "--output", "../renders/haiku-cards.html",
+                "--css", "../css/haiku-cards.css",
                 // "--scripts", "haiku-play.js",
                 "--exclude", "set=retired",
-                // "--include", "set=core-rules",
-                // "--include", "set=core",
+                "--include", "set=core-rules",
+                "--include", "set=core",
+                "--include", "set=expanded",
                 // "--include", "set=gothic",
                 // "--include", "set=gothic-rules",
                 // "--include", "set=romantic",
                 // "--include", "set=romantic-rules",
                 // "--include", "set=silly",
-                "--include", "set=christmas",
-                "--include", "set=christmas-rules",
+                // "--include", "set=christmas",
+                // "--include", "set=christmas-rules",
                 // "--exclude", "set=core-rules",
-                // "--no-backs", 
+                "--no-backs",
                 // "--shuffle",
                 // "--include", "for-testing=true",        // Test
                 // "--max-count", "1",                     // Test
-                "--sort", "set=core-rules,core,expanded,gothic,christmas,romantic,silly", 
-                "--sort", "template=blank-word,article,adjective,adverb,noun,verb", 
-                "--sort", "syllables", 
+                "--sort", "set=core-rules,core,expanded,gothic,christmas,romantic,silly",
+                "--sort", "template=blank-word,article,adjective,adverb,noun,verb",
+                "--sort", "syllables",
                 // "--sort", "word",
             ]
         },
@@ -48,8 +49,8 @@
             ],
             "program": "${workspaceFolder}/cardmaker.js",
             "cwd": "${workspaceFolder}/PrayingLots",
-            "args": [ 
-                "prayer-cards.db.json", 
+            "args": [
+                "prayer-cards.db.json",
                 "--css", "prayer-cards.css",
                 "--exclude", "omit=true",
                 "--exclude", "translation=KJV",
@@ -64,8 +65,8 @@
             ],
             "program": "${workspaceFolder}/cardmaker.js",
             "cwd": "${workspaceFolder}/PrayingLots",
-            "args": [ 
-                "prayer-cards-large-print.db.json", 
+            "args": [
+                "prayer-cards-large-print.db.json",
                 "--css", "prayer-cards.css",
                 "--exclude", "omit=true",
                 "--exclude", "translation=KJV"
@@ -80,7 +81,7 @@
             ],
             "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
             "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "args": [
                 "--words", "haiku-words.append.json",
                 "--css", "haiku-cards.css", "haiku-play.css",
                 "--scripts", "haiku-play.js",
@@ -106,7 +107,7 @@
                     "--rounds", "8",
                     "--players-per-game", "4",
                     "--keep", "15",
-            ] 
+            ]
         },
         {
             "type": "node",
@@ -117,7 +118,7 @@
             ],
             "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
             "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "args": [
                 "--words", "haiku-words.append.json",
                 "--css", "haiku-cards.css", "haiku-play.css",
                 "--scripts", "haiku-play.js",
@@ -141,11 +142,11 @@
                     "--rounds", "8",
                     "--players-per-game", "4",
                     "--keep", "15",
-                    
+
                     "--runs", "10000",
-                    "--players", "4",            
-            ] 
-        },        
+                    "--players", "4",
+            ]
+        },
         {
             "type": "node",
             "request": "launch",
@@ -155,7 +156,7 @@
             ],
             "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
             "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "args": [
                 "--words", "haiku-words.append.json",
                 "--css", "haiku-cards.css", "haiku-play.css",
                 "--scripts", "haiku-play.js",
@@ -171,8 +172,8 @@
                     "--html", "haiku-analysis.html",
                     // "--params", "haiku-parameters.json",
                     "--rules", "words-min"
-            ] 
-        },        
+            ]
+        },
         {
             "type": "node",
             "request": "launch",
@@ -182,7 +183,7 @@
             ],
             "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
             "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "args": [
                 "--words", "haiku-words.append.json",
                 "--css", "haiku-cards.css", "haiku-play.css",
                 "--scripts", "haiku-play.js",
@@ -196,7 +197,7 @@
 
                 "sentence",
                     "--html", "haiku-analysis.html",
-            ] 
+            ]
         },        {
             "type": "node",
             "request": "launch",
@@ -206,7 +207,7 @@
             ],
             "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
             "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "args": [
                 "--words", "haiku-words.append.json",
                 "--css", "haiku-cards.css", "haiku-play.css",
                 "--scripts", "haiku-play.js",
@@ -221,7 +222,7 @@
 
                 "tableau",
                     "--html", "haiku-analysis.html",
-            ] 
+            ]
         },
         {
             "type": "node",
@@ -232,11 +233,11 @@
             ],
             "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
             "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "args": [
                 "--words", "haiku-words.append.json",
                 "export",
                     "--out", "haiku-words.append.json",
-            ] 
+            ]
         },
         {
             "type": "node",
@@ -247,7 +248,7 @@
             ],
             "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
             "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "args": [
                 "--words", "haiku-words.append.json",
                 "--css", "haiku-cards.css", "haiku-play.css",
 
@@ -262,7 +263,7 @@
 
                 "stats",
                     "--csv", "haiku-stats-{DATE}.csv",
-            ] 
+            ]
         },
         {
             "type": "node",
@@ -273,7 +274,7 @@
             ],
             "program": "${workspaceFolder}/Haiku/haiku_analyzer.js",
             "cwd": "${workspaceFolder}/Haiku",
-            "args": [ 
+            "args": [
                 "--words", "haiku-words.append.json",
                 "--include", "set=core",
                 "--include", "set=expanded",
@@ -282,7 +283,7 @@
                 // "--include", "set=silly",
                 "--exclude", "template=pronoun",
                 "--exclude", "template=stativeverb",
-                
+
                 "play",
                     "--html", "haiku-analysis.html",
                     // "--in-params", "haiku-parameters.json",
@@ -300,8 +301,8 @@
             ],
             "program": "${workspaceFolder}/PrayingLots/verse_converter.js",
             "cwd": "${workspaceFolder}/PrayingLots",
-            "args": [ 
-                "export", 
+            "args": [
+                "export",
                     "--file", "verses-niv.txt",
                     "--refsonly",
 
@@ -319,7 +320,7 @@
             ],
             "program": "${workspaceFolder}/PrayingLots/verse_converter.js",
             "cwd": "${workspaceFolder}/PrayingLots",
-            "args": [ 
+            "args": [
                 "import",
                     "--verses", "verses-niv.db.txt",
                     "--json", "prayer-cards-niv.append.json",
