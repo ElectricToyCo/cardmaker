@@ -35,7 +35,7 @@
                 // "--include", "for-testing=true",        // Test
                 // "--max-count", "1",                     // Test
                 "--sort", "set=core-rules,core,expanded,gothic,christmas,romantic,silly",
-                "--sort", "template=blank-word,article,adjective,adverb,noun,verb",
+                "--sort", "template=blank-word,article,adjective,adverb,noun,verb,stativeverb",
                 "--sort", "syllables",
                 // "--sort", "word",
             ]
@@ -92,7 +92,7 @@
                 // "--include", "set=romantic",
                 // "--include", "set=silly",
                 "--exclude", "template=pronoun",
-                "--exclude", "template=stativeverb",
+                // "--exclude", "template=stativeverb",
 
                 "tune",
                     "--html", "haiku-analysis.html",
@@ -193,7 +193,7 @@
                 // "--include", "set=romantic",
                 // "--include", "set=silly",
                 "--exclude", "template=pronoun",
-                "--exclude", "template=stativeverb",
+                // "--exclude", "template=stativeverb",
 
                 "sentence",
                     "--html", "haiku-analysis.html",
@@ -218,7 +218,7 @@
                 // "--include", "set=romantic",
                 // "--include", "set=silly",
                 "--exclude", "template=pronoun",
-                "--exclude", "template=stativeverb",
+                // "--exclude", "template=stativeverb",
 
                 "tableau",
                     "--html", "haiku-analysis.html",
@@ -259,7 +259,7 @@
                 // "--include", "set=romantic",
                 // "--include", "set=silly",
                 "--exclude", "template=pronoun",
-                "--exclude", "template=stativeverb",
+                // "--exclude", "template=stativeverb",
 
                 "stats",
                     "--csv", "haiku-stats-{DATE}.csv",
@@ -282,7 +282,7 @@
                 // "--include", "set=romantic",
                 // "--include", "set=silly",
                 "--exclude", "template=pronoun",
-                "--exclude", "template=stativeverb",
+                // "--exclude", "template=stativeverb",
 
                 "play",
                     "--html", "haiku-analysis.html",

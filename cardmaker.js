@@ -37,6 +37,12 @@ const argv = yargs(process.argv.slice(2))
         alias: 's',
         type: 'string'
     } )
+    .option( 'fronts', {
+        description: 'Emit card fronts (the default). Use --no-fronts to suppress card fronts.',
+        alias: 'f',
+        default: true,
+        type: 'boolean'
+    } )
     .option( 'backs', {
         description: 'Emit card backs (the default). Use --no-backs to suppress card backs.',
         alias: 'b',
@@ -70,6 +76,7 @@ const argv = yargs(process.argv.slice(2))
 
 const cardDatabasePath = argv._[0];
 const scriptPaths = argv.scripts ?? [];
+const emitCardFronts = argv.fronts ?? true;
 const emitCardBacks = argv.backs ?? true;
 const doShuffle = argv.shuffle ?? false;
 
@@ -146,16 +153,61 @@ function generateCardSetHtml( cardSet ) {
         console.log( `Cards with property '${counts[i]}': ${counters[i].entries} (${counters[i].copies} copies)` );
     }
 
+    function findMatchingCard(sourceCard, variant) {
+        const amendedSourceCard = { ...sourceCard };
+        Object.assign(amendedSourceCard, variant);
+        delete amendedSourceCard.back;
+
+        return cards.find( card => {
+            for (const prop in amendedSourceCard) {
+                if (amendedSourceCard[prop] !== card[prop]) {
+                    return false;
+                }
+            }
+            return true;
+        });
+    }
+
     // Generate card HTML
+
+    const selfBacking = setAttributes['self-backed'];
+    
+    const claimedBackCards = [];
 
     const cardHtmls = [];
     const cardBackHtmls = [];
-    for( const card of cards ) {
+    for(const card of cards) {
+        
+        // Skip cards that have already been claimed as the backs of other cards.
+        if(claimedBackCards.includes(card)) {
+            continue;
+        }
+
         const cardHtml = generateCardHtml( cardTemplates, card );
 
-        if( cardHtml ) {
-            const backTemplateName = templateProperty( cardTemplates, card.template, 'back-template' );
-            const cardBackHtml = generateCardHtml( cardTemplates, card, backTemplateName );
+        if(cardHtml) {
+            
+            // By default the card back is generated from a templated specified by the card template's "back-template" property.
+            // The card itself may, however, have a "back" attribute that indicates a specific card to be shown
+            // for its own back.
+
+            let backCard = card;
+            let backTemplateName = templateProperty(cardTemplates, card.template, 'back-template');
+
+            if(card.back)
+            {
+                // Find the most similar card that shares attributes with the card indicated by the "back" attribute.
+                backCard = findMatchingCard(card, card.back);
+                claimedBackCards.push(backCard);
+                backCard.back = card;
+                backTemplateName = undefined;
+            }
+            else if(selfBacking) {
+                backCard = card;
+                backTemplateName = undefined;
+            }
+
+            const cardBackHtml = generateCardHtml( cardTemplates, backCard, backTemplateName );
 
             const count = clampCardCount( card.count, argv.minCount, argv.maxCount );
 
@@ -169,7 +221,7 @@ function generateCardSetHtml( cardSet ) {
         }
     };
 
-    countedCards += cardHtmls.length;
+    countedCards += emitCardFronts ? cardHtmls.length : 0;
     countedCardBacks += emitCardBacks ? cardBackHtmls.length : 0;
 
     // Pagination
@@ -202,11 +254,13 @@ function generateCardSetHtml( cardSet ) {
             return `<div class='footer'><span class='set-name'>${setName}</span> | <span class='pub-date'>${publicationDate}</span> | <span class='page-number'><span class='page'>${pageNumberingText}</span><span class='out-of'>/${pages.length}</span></span></div>`;
         }
 
-        cardSetHtml += "<div class='card-page card-fronts'><div class='interior'>\n";
-        cardSetHtml += pages[ i ];
-        cardSetHtml += '</div>'
-        cardSetHtml += footerText( `${displayPageNumber}F` );
-        cardSetHtml += '</div> <!-- end card-page -->\n';
+        if( emitCardFronts ) {
+            cardSetHtml += "<div class='card-page card-fronts'><div class='interior'>\n";
+            cardSetHtml += pages[ i ];
+            cardSetHtml += '</div>'
+            cardSetHtml += footerText( `${displayPageNumber}F` );
+            cardSetHtml += '</div> <!-- end card-page -->\n';
+        }
 
         if( emitCardBacks ) {
             cardSetHtml += "<div class='card-page card-backs'><div class='interior'>\n";
