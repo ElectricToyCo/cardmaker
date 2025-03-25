@@ -7,6 +7,8 @@ import { exit } from 'process';
 
 import yargs from 'yargs/yargs';
 
+const PROGRAM_START_TIME = new Date();    
+
 const argv = yargs(process.argv.slice(2))
     .usage('Usage: $0 <card database path> [options]')
     .option( 'output', {
@@ -74,6 +76,16 @@ const argv = yargs(process.argv.slice(2))
     .epilog('copyright 2022')
     .argv;
 
+function pathFromArgs( argParamName, def = undefined ) {
+    const path = argv[argParamName] ?? def;
+    if( path === undefined ) return undefined;
+
+    // {DATE} and {RUN} substitution.
+    return path
+        .replace( '{DATE}', new Date().toISOString().replace( /:/g, '-') )
+        .replace( '{RUN}', PROGRAM_START_TIME.toISOString().replace( /:/g, '-' ))
+}
+
 const cardDatabasePath = argv._[0];
 const scriptPaths = argv.scripts ?? [];
 const emitCardFronts = argv.fronts ?? true;
@@ -82,7 +94,7 @@ const doShuffle = argv.shuffle ?? false;
 
 const sortProperties = argv.sort ?? [];
 
-const outputPath = argv.output || ( basename( cardDatabasePath, '.db.json' ) + ".html" );
+const outputPath = pathFromArgs( 'output', ( basename( cardDatabasePath, '.db.json' ) + ".html" ));
 
 let countedCards = 0;
 let countedCardBacks = 0;
@@ -121,6 +133,13 @@ function generateCardSetHtml( cardSet ) {
 
     cards = filterCards( cards, argv.include, argv.exclude );
 
+    // TODO: Haiku-specific.
+    cards.forEach(card => {
+        if( card.template === 'verb' && !card.hasOwnProperty('alternative-form') ) {
+            card['alternative-form'] = '(s)';
+        }
+    });
+    
     // Shuffle.
     if( doShuffle ) {
         console.log( 'Shuffling...' );
@@ -160,8 +179,13 @@ function generateCardSetHtml( cardSet ) {
 
         return cards.find( card => {
             for (const prop in amendedSourceCard) {
-                if (amendedSourceCard[prop] !== card[prop]) {
-                    return false;
+                if(amendedSourceCard[prop] !== card[prop]) {
+                    if(!card[prop]) {
+                        console.log(`We may match source card '${sourceCard.word}' with a potential back '${card.word}' (${card.template}) even though the source card wants a property of card.${prop} == ${amendedSourceCard[prop]} but the candidate has a nullish value for that propery.`)
+                    }
+                    else {
+                        return false;
+                    }
                 }
             }
             return true;
@@ -198,9 +222,16 @@ function generateCardSetHtml( cardSet ) {
             {
                 // Find the most similar card that shares attributes with the card indicated by the "back" attribute.
                 backCard = findMatchingCard(card, card.back);
-                claimedBackCards.push(backCard);
-                backCard.back = card;
-                backTemplateName = undefined;
+                if(backCard) {
+                    claimedBackCards.push(backCard);
+                    backCard.back = card;
+                    backTemplateName = undefined;
+                }
+                else {
+                    console.log(`Card with template '${card.template}' has a back attribute that does not match any card. ${JSON.stringify(card)}`)
+                    backCard = card;
+                    backTemplateName = undefined;
+                }
             }
             else if(selfBacking) {
                 backCard = card;
@@ -237,25 +268,25 @@ function generateCardSetHtml( cardSet ) {
         const backRows  = [];
 
         for( let j = 0; cardHtmls.length > 0 && j < (pageRows ?? 100000); ++j ) {
-            frontRows.push( `<div class='page-row'>${cardHtmls.splice( 0, pageColumns ?? cardHtmls.length ).join( '\n' )}\n</div> <!-- end row -->`);
-            backRows.push( `<div class='page-row'>${cardBackHtmls.splice( 0, pageColumns ?? cardBackHtmls.length ).reverse().join( '\n')}\n</div> <!-- end row -->` );
+            frontRows.push( `<div class="page-row">${cardHtmls.splice( 0, pageColumns ?? cardHtmls.length ).join( '\n' )}\n</div> <!-- end row -->`);
+            backRows.push( `<div class="page-row">${cardBackHtmls.splice( 0, pageColumns ?? cardBackHtmls.length ).reverse().join( '\n')}\n</div> <!-- end row -->` );
         }
 
         pages.push( frontRows.join( '\n' ) );
         pagesBack.push( backRows.join( '\n' ) );
     }
 
-    let cardSetHtml = "<div class='card-set'>\n";
+    let cardSetHtml = `<div class="card-set">\n`;
 
     for( let i = 0; i < pages.length; ++i ) {
         const displayPageNumber = i + 1;
 
         function footerText( pageNumberingText ) {
-            return `<div class='footer'><span class='set-name'>${setName}</span> | <span class='pub-date'>${publicationDate}</span> | <span class='page-number'><span class='page'>${pageNumberingText}</span><span class='out-of'>/${pages.length}</span></span></div>`;
+            return `<div class="footer"><span class="set-name">${setName}</span> | <span class="pub-date">${publicationDate}</span> | <span class="page-number"><span class="page">${pageNumberingText}</span><span class="out-of">/${pages.length}</span></span></div>`;
         }
 
         if( emitCardFronts ) {
-            cardSetHtml += "<div class='card-page card-fronts'><div class='interior'>\n";
+            cardSetHtml += `<div class="card-page card-fronts"><div class="interior">\n`;
             cardSetHtml += pages[ i ];
             cardSetHtml += '</div>'
             cardSetHtml += footerText( `${displayPageNumber}F` );
@@ -263,7 +294,7 @@ function generateCardSetHtml( cardSet ) {
         }
 
         if( emitCardBacks ) {
-            cardSetHtml += "<div class='card-page card-backs'><div class='interior'>\n";
+            cardSetHtml += `<div class="card-page card-backs"><div class="interior">\n`;
             cardSetHtml += pagesBack[ i ];
             cardSetHtml += footerText( `${displayPageNumber}B` );
             cardSetHtml += "</div></div> <!-- end card-page -->\n";
@@ -297,12 +328,13 @@ readFile( cardDatabasePath, 'utf-8', (err, cardDatabaseJson) => {
 
         // Conclude HTML production
 
-        let allHtml = "<html><head>\n";
-        styleSheetPaths.forEach( styleSheetPath => allHtml += `<link rel='stylesheet' type='text/css' href='${styleSheetPath}' />\n` );
-        allHtml += "</head>\n<body>";
+        let allHtml = "<!DOCTYPE html>\n<html>\n\t<head>\n";
+        allHtml += `<title>${cardDatabasePath} Cards</title>\n`;
+        styleSheetPaths.forEach( styleSheetPath => allHtml += `<link rel="stylesheet" type="text/css" href="${styleSheetPath}" />\n` );
+        allHtml += "\t</head>\n\t<body>\n";
         allHtml += cardSetsHtml.join( '\n' );
-        scriptPaths.forEach( scriptPath => allHtml += `<script src='${scriptPath}'></script>\n` );
-        allHtml += '</body></html>';
+        scriptPaths.forEach( scriptPath => allHtml += `<script src="${scriptPath}"></script>\n` );
+        allHtml += "\t</body>\n</html>\n";
 
         writeFile( outputPath, allHtml, (err) => {
             if (err) throw err;

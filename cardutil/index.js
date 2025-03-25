@@ -167,7 +167,7 @@ function undecorateTemplateMarkup( html ) {
     if( !html ) return html;
 
     // Remove any lingering conditionality [[tags? ... ]]tags?.
-    html = html.replace( /\[\[([A-Za-z\-_]+)\?(.|\n)*\]\]\1\?/g, '' );
+    html = html.replace( /\[\[([A-Za-z\-_]+)\?(.|\n)*?\]\]\1\?/g, '' );
 
     // Remove any lingering unmatched {{tags}}.
     return html.replace( /{{.*?}}/g, '' );
