@@ -108,50 +108,99 @@ function parseJSONWithComments( data ) {
     return JSON.parse( stripJSONComments( data ));
 }
 
-function generateCardSetHtml( cardSet ) {
-    const cardTemplates = loadCardTemplates( cardSet[ 'templates' ] );
+function generateCardSetHtml(cardSet) {
+    const cardTemplates = loadCardTemplates(cardSet['templates']);
 
-    const setAttributes = cardSet[ 'set-attribs' ];       // TODO null case
+    const setAttributes = cardSet['set-attribs'];       // TODO null case
 
     const setName = setAttributes.name ?? '';
 
-    const publicationDate = setAttributes[ 'publication-date' ] ?? new Date().toISOString();
+    const publicationDate = setAttributes['publication-date'] ?? new Date().toISOString();
 
-    let cards = cardSet[ 'cards' ];
-    if( !cards ) {
-        console.error( `Card database '${cardDatabasePath}' lacked the required attribute 'cards'. Aborting.` );
-        exit( 3 );
+    let cards = cardSet['cards'];
+    if(!cards) {
+        console.error(`Card database '${cardDatabasePath}' lacked the required attribute 'cards'. Aborting.`);
+        exit(3);
     }
 
-    const appendFileList = arrayFromValue( cardSet[ 'append' ] );
+    const appendFileList = arrayFromValue(cardSet['append']);
 
-    for( const fileName of appendFileList ) {
-        const appendFileData = readFileSync( fileName,'utf8' );
-        const appendCards = parseJSONWithComments( appendFileData );
-        cards = cards.concat( appendCards );
+    for(const fileName of appendFileList) {
+        const appendFileData = readFileSync(fileName, 'utf8');
+        const appendCards = parseJSONWithComments(appendFileData);
+        cards = cards.concat(appendCards);
     }
 
-    cards = filterCards( cards, argv.include, argv.exclude );
+    cards = filterCards(cards, argv.include, argv.exclude);
 
     // TODO: Haiku-specific.
     cards.forEach(card => {
-        if( card.template === 'verb' && !card.hasOwnProperty('alternative-form') ) {
+        if(card.template === 'verb' && !card.hasOwnProperty('alternative-form')) {
             card['alternative-form'] = '(s)';
         }
     });
-    
-    // Shuffle.
+
+    //
+    // Link up cards with their backs.
+    //
+
+    function findMatchingCard(sourceCard, variant) {
+        const amendedSourceCard = { ...sourceCard };
+        Object.assign(amendedSourceCard, variant);
+        delete amendedSourceCard.back;
+
+        return cards.find(card => {
+            for(const prop in amendedSourceCard) {
+                if(amendedSourceCard[prop] !== card[prop]) {
+                    if(!card[prop]) {
+                        console.log(`We may match source card '${sourceCard.word}' with a potential back '${card.word}' (${card.template}) even though the source card wants a property of card.${prop} == ${amendedSourceCard[prop]} but the candidate has a nullish value for that propery.`);
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        });
+    }
+
+    const claimedBackCards = [];
+
+    for(const card of cards) {
+        
+        // Skip cards that have already been claimed as the backs of other cards.
+        if(claimedBackCards.includes(card)) {
+            continue;
+        }
+            
+        if(card.back) {
+            // Find the most similar card that shares attributes with the card indicated by the "back" attribute.
+            const backCard = findMatchingCard(card, card.back);
+            if(backCard) {
+                card.claimedBackCard = backCard;
+                backCard.back = card;
+                claimedBackCards.push(backCard);
+            }
+            else {
+                console.log(`Card with template '${card.template}' has a back attribute that does not match any card. ${JSON.stringify(card)}`);
+            }
+        }
+    }
+
+    //
+    // Shuffle cards. Must happen AFTER back-linking.
+    //
     if( doShuffle ) {
         console.log( 'Shuffling...' );
         shuffleArray( cards );
     }
 
-    // Sort cards.
-
+    //
+    // Sort cards. Must happen AFTER back-linking and shuffling.
+    //
     console.log( 'Sorting...' );
     sortCards( cards, sortProperties );
-
-
+    
     // Calculate and print statistics
 
     const counts = arrayFromValue( argv.stat );
@@ -172,37 +221,19 @@ function generateCardSetHtml( cardSet ) {
         console.log( `Cards with property '${counts[i]}': ${counters[i].entries} (${counters[i].copies} copies)` );
     }
 
-    function findMatchingCard(sourceCard, variant) {
-        const amendedSourceCard = { ...sourceCard };
-        Object.assign(amendedSourceCard, variant);
-        delete amendedSourceCard.back;
-
-        return cards.find( card => {
-            for (const prop in amendedSourceCard) {
-                if(amendedSourceCard[prop] !== card[prop]) {
-                    if(!card[prop]) {
-                        console.log(`We may match source card '${sourceCard.word}' with a potential back '${card.word}' (${card.template}) even though the source card wants a property of card.${prop} == ${amendedSourceCard[prop]} but the candidate has a nullish value for that propery.`)
-                    }
-                    else {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        });
-    }
-
+    //
     // Generate card HTML
+    //
 
     const selfBacking = setAttributes['self-backed'];
-    
-    const claimedBackCards = [];
 
     const cardHtmls = [];
     const cardBackHtmls = [];
+
     for(const card of cards) {
         
         // Skip cards that have already been claimed as the backs of other cards.
+        //
         if(claimedBackCards.includes(card)) {
             continue;
         }
@@ -218,20 +249,10 @@ function generateCardSetHtml( cardSet ) {
             let backCard = card;
             let backTemplateName = templateProperty(cardTemplates, card.template, 'back-template');
 
-            if(card.back)
+            if(card.claimedBackCard)
             {
-                // Find the most similar card that shares attributes with the card indicated by the "back" attribute.
-                backCard = findMatchingCard(card, card.back);
-                if(backCard) {
-                    claimedBackCards.push(backCard);
-                    backCard.back = card;
-                    backTemplateName = undefined;
-                }
-                else {
-                    console.log(`Card with template '${card.template}' has a back attribute that does not match any card. ${JSON.stringify(card)}`)
-                    backCard = card;
-                    backTemplateName = undefined;
-                }
+                backCard = card.claimedBackCard;
+                backTemplateName = undefined;
             }
             else if(selfBacking) {
                 backCard = card;
