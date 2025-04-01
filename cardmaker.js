@@ -135,7 +135,7 @@ function generateCardSetHtml(cardSet) {
 
     // TODO: Haiku-specific.
     cards.forEach(card => {
-        if(card.template === 'verb' && !card.hasOwnProperty('alternative-form')) {
+        if(['verb', 'stativeverb', 'theme-verb'].includes(card.template) && !card.hasOwnProperty('alternative-form')) {
             card['alternative-form'] = '(s)';
         }
     });
