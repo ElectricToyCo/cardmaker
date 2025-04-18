@@ -1,0 +1,44 @@
+{
+    "set-attribs" : {
+        "page-columns": 3,
+        "page-rows": 3
+    },
+    "cards" : [
+        { "template": "person", "$name": "The Global Church<div class='emoji' style='font-size: 30pt;'>⛪️ 🌍</div>Believers Everywhere", "image": "PersonFront.png" },
+        { "template": "person", "image": "Liam" },
+        { "template": "person", "image": "PersonFront.png", "count": 1 },
+        {	"template": "topic",
+            "$text": "Sin\nRepentance\nForgiveness",
+            "verse": "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness", 
+            "ref": "1 John 1:9",
+            "translation": "NIV"
+        },
+        {	"template": "topic", "count": 1 },
+        {	"template": "adoration",
+            "$text": "Creator",
+            "verse": "But God made the earth by his power; he founded the world by his wisdom and stretched out the heavens by his understanding.", 
+            "ref": "Jer.10:12",
+            "translation": "NIV"
+        },
+        {	"template": "adoration", "count": 1 },
+        {   "template": "adoration-context", "text": "&#8230in my life today?" },
+        {   "template": "adoration-context", "count": 1 },
+        {   "template": "benediction", 
+            "verse": "Now to him who is able to do far more abundantly than all that we ask or think, according to the power at work within us, to him be glory in the church and in Christ Jesus throughout all generations, forever and ever. Amen.", 
+            "ref": "Eph 3:20&ndash;21",
+            "translation": "NIV" },
+        { "template": "benediction", "count": 1 },
+        { "template": "confession", 
+            "prompt": "Pride",
+            "analogues": "Haughty eyes, self-importance, self-loathing",
+            "opposites": "Humility, childlikeness, self-denial",
+            "verse": "Then I acknowledged my sin to you and did not cover up my iniquity. I said, &ldquo;I will confess my transgressions to the LORD&rdquo;&mdash;and you forgave the guilt of my sin.", 
+            "ref": "Psa 32:5",
+            "translation": "NIV"
+        },
+        { "template": "memory", "verse": "In the beginning God created the heavens and the earth.", "ref": "Gen. 1:1", "translation": "NIV" },
+        { "template": "memory", "classes": "smalltext", "verse": "This, then, is how you should pray: &lsquo;Our Father in heaven, hallowed be your name, your kingdom come, your will be done on earth as it is in heaven. Give us today our daily bread. Forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from the evil one.&rsquo;", "ref": "Matt. 6:9&ndash;13", "translation": "NIV" },
+        { "template": "memory", "count": 1 },
+        { "template": "divider-person", "name": "People" }
+    ]
+}

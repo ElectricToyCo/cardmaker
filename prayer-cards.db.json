@@ -1,0 +1,26 @@
+[
+    {
+        "templates" : "prayer-cards.card-templates.json",
+        "set-attribs" : {
+            "name": "Praying Lots Prayer Cards NIV",
+            "page-columns": 4,
+            "page-rows": 3
+        },
+        "append": [
+            "prayer-cards-wofford-private.append.json",
+            "prayer-cards.append.json", 
+            "prayer-cards-niv.append.json"
+        ],
+        "cards" : []
+    },
+    {
+        "templates" : "prayer-cards.card-templates.json",
+        "set-attribs" : {
+            "name": "Praying Lots Prayer Card Dividers",
+            "page-columns": 4,
+            "page-rows": 3
+        },
+        "append": "prayer-dividers.append.json",
+        "cards" : []
+    }
+]

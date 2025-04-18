@@ -1,0 +1,40 @@
+{
+    "set-attribs" : {
+        "page-columns": 3,
+        "page-rows": 3
+    },
+    "cards" : [
+        { "template": "person", "$name": "The Persecuted Church<div class='emoji'><img src='Crown-of-Thorns.png' width='100px' /></div>", "image": "PersonFront.png", "count": 2 },
+
+
+        { "template": "benediction", "verse": "Now to him who is able to do far more abundantly than all that we ask or think, according to the power at work within us, to him be glory in the church and in Christ Jesus throughout all generations, forever and ever. Amen.", 
+            "ref": "Eph 3:20&ndash;21",
+            "translation": "NIV" },
+        { "template": "benediction", "verse": "May the God of hope fill you with all joy and peace in believing, so that by the power of the Holy Spirit you may abound in hope.", 
+            "ref": "Rom 15:13",
+            "translation": "NIV" },
+        { "template": "benediction", "verse": "To the King of ages, immortal, invisible, the only God, be honor and glory forever and ever. Amen.", 
+            "ref": "1 Tim 1:17",
+            "translation": "NIV" },
+        { "template": "benediction", "verse": "Now may the God of peace himself sanctify you completely, and may your whole spirit and soul and body be kept blameless at the coming of our Lord Jesus Christ. He who calls you is faithful; he will surely do it.", 
+            "ref": "1 Thess 5:23&ndash;24",
+            "translation": "NIV" },
+        { "template": "benediction", "verse": "Now may our Lord Jesus Christ himself, and God our Father, who loved us and gave us eternal comfort and good hope through grace, comfort your hearts and establish them in every good work and word.", 
+            "ref": "2 Thess 2:16&ndash;17",
+            "translation": "NIV" },
+        { "template": "benediction", "verse": "Oh, the depth of the riches and wisdom and knowledge of God! How unsearchable are his judgments and how inscrutable his ways! For from him and through him and to him are all things. To him be glory forever. Amen.", 
+            "ref": "Rom 11:33,36",
+            "translation": "NIV" },
+        { "template": "benediction", "verse": "To him who loves us and has freed us from our sins by his blood and made us a kingdom, priests to his God and Father, to him be glory and dominion forever and ever. Amen.", 
+            "ref": "Rev 1:5&ndash;6",
+            "translation": "NIV" },
+        { "template": "benediction", "verse": "Amen! Blessing and glory and wisdom and thanksgiving and honor and power and might be to our God forever and ever! Amen.", 
+            "ref": "Rev 7:12",
+            "translation": "NIV" },
+        { "template": "benediction", "verse": "[May] the peace of God, which transcends all understanding, guard your hearts and your minds in Christ Jesus.", 
+            "ref": "Phil 4:7",
+            "translation": "NIV" },
+
+        { "template": "divider-benediction", "name": "Benediction" }
+    ]
+}

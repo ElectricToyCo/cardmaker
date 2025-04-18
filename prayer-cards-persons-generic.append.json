@@ -1,0 +1,4 @@
+[
+    { "template": "person", "image": "PersonFront.png", "count": 21 },
+    { "template": "person", "$name": "My Country<div class='emoji' style='font-size: 40pt;'>🏳</div>Those Who Govern", "image": "PersonFront.png" }
+]

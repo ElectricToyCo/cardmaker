@@ -1,0 +1,10 @@
+[
+    { "template": "divider-person", "name": "People" },
+    { "template": "divider-persondaily", "name": "People Daily" },
+    { "template": "divider-topic", "name": "Topics" },
+    { "template": "divider-adoration", "name": "Adoration" },
+    { "template": "divider-adorationcontext", "name": "Adoration Context" },
+    { "template": "divider-benediction", "name": "Benediction" },
+    { "template": "divider-confession", "name": "Confession" },
+    { "template": "divider-extras", "name": "Extras" }
+]

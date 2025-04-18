@@ -1,0 +1,32 @@
+:root {
+    --card-base-width: 2.5in;
+    --card-base-height: 3.5in;
+
+    --font-size-verse-larger: 16pt;
+}
+
+body { font-size: 24pt; }
+
+.card-page > .interior {
+    height: 8in;        /* for landscape printing. */
+}
+
+/* LANDSCAPE MODE ADJUSTMENT */
+.card-page.card-backs > .interior {
+    margin-right: calc( 0.25in + var(--landscape-back-right-padding-adjustment));
+}
+
+.topic .interior { 
+    grid-template-rows: auto 26mm;
+}
+
+.adoration .interior { 
+    grid-template-rows: auto 14mm;
+}
+
+.confession .prompt { font-size: 16pt; }
+.confession .prompt2 { font-size: 14pt; }
+
+.card .interior {
+    padding: 2.5mm;
+}

@@ -1,0 +1,452 @@
+[
+    {
+        "template": "topic",
+        "$text": "Sin\nRepentance\nForgiveness",
+        "verse": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+        "ref": "1 John 1:9",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Thanks",
+        "verse": "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+        "ref": "1 Thess 5:18",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Finances\nEarthly Blessing",
+        "verse": "For thou shalt eat the labour of thine hands: happy shalt thou be, and it shall be well with thee.",
+        "ref": "Ps 128:2",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Work\nCareer",
+        "verse": "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+        "ref": "Col 3:17",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Emotional Distress and Comfort",
+        "verse": "For as the sufferings of Christ abound in us, so our consolation also aboundeth by Christ.",
+        "ref": "2 Cor 1:5",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Encouragement",
+        "verse": "Wherefore comfort yourselves together, and edify one another, even as also ye do.",
+        "ref": "1 Thess 5:11",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Physical Health",
+        "verse": "Beloved, I wish above all things that thou mayest prosper and be in health, even as thy soul prospereth.",
+        "ref": "3 John 2",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Spiritual Maturity",
+        "verse": "But let patience have her perfect work, that ye may be perfect and entire, wanting nothing.",
+        "ref": "Jas 1:4",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Wisdom",
+        "verse": "So shall the knowledge of wisdom be unto thy soul: when thou hast found it, then there shall be a reward, and thy expectation shall not be cut off.",
+        "ref": "Prov 24:14",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Anxiety\nPeace",
+        "verse": "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+        "ref": "Phil 4:6&ndash;7",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Right Desires\nDirection",
+        "verse": "Work out your own salvation with fear and trembling. For it is God which worketh in you both to will and to do of his good pleasure.",
+        "ref": "Phil 2:12&ndash;13",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Discernment\nGod&apos;s Will",
+        "verse": "The meek will he guide in judgment: and the meek will he teach his way.",
+        "ref": "Ps 25:9",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Truth\nFaith",
+        "verse": "And beside this, giving all diligence, add to your faith virtue; and to virtue knowledge.",
+        "ref": "2 Pet 1:5",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Friendships",
+        "verse": "A friend loveth at all times, and a brother is born for adversity.",
+        "ref": "Prov 17:17",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Family",
+        "verse": "God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land.",
+        "ref": "Ps 68:6",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Daily Bread",
+        "verse": "Remove far from me vanity and lies: give me neither poverty nor riches; feed me with food convenient for me.",
+        "ref": "Prov 30:8",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Prayers Answered",
+        "verse": "O thou that hearest prayer, unto thee shall all flesh come.",
+        "ref": "Ps 65:2",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Fruitfulness",
+        "verse": "Ye have not chosen me, but I have chosen you, and ordained you, that ye should go and bring forth fruit, and that your fruit should remain.",
+        "ref": "John 15:16",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Joy\nHappiness",
+        "verse": "He shall pray unto God, and he will be favourable unto him: and he shall see his face with joy: for he will render unto man his righteousness.",
+        "ref": "Job 33:26",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "What Can I Do To Help?",
+        "verse": "If a brother or sister be naked, and destitute of daily food, And one of you say unto them, Depart in peace, be ye warmed and filled&#8230;what doth it profit?",
+        "ref": "Jas 2:15&ndash;16",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Salvation",
+        "verse": "He will fulfil the desire of them that fear him: he also will hear their cry, and will save them.",
+        "ref": "Ps 145:19",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Preparedness for Judgment",
+        "verse": "Watch ye therefore, and pray always, that ye may be accounted worthy to escape all these things that shall come to pass, and to stand before the Son of man.",
+        "ref": "Luke 21:36",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Good Works",
+        "verse": "For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+        "ref": "Eph 2:10",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Boldness",
+        "verse": "And now, Lord, behold their threatenings: and grant unto thy servants, that with all boldness they may speak thy word.",
+        "ref": "Acts 4:29",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Church Family",
+        "verse": "Behold, how good and how pleasant it is for brethren to dwell together in unity!",
+        "ref": "Ps 133:1",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Spiritual Disciplines",
+        "verse": "This book of the law shall not depart out of thy mouth; but thou shalt meditate therein day and night, that thou mayest observe to do according to all that is written therein.",
+        "ref": "Josh 1:8",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Presence of God",
+        "verse": "The LORD is nigh unto all them that call upon him, to all that call upon him in truth.",
+        "ref": "Ps 145:18",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Knowledge of God&apos;s Grace and Love",
+        "verse": "But grow in grace, and in the knowledge of our Lord and Saviour Jesus Christ. To him be glory both now and for ever. Amen.",
+        "ref": "2 Pet 3:18",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Spiritual Protection",
+        "verse": "For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places.",
+        "ref": "Eph 6:12",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Safety\nProtection",
+        "verse": "Preserve me, O God: for in thee do I put my trust.",
+        "ref": "Ps 16:1",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Mercy",
+        "verse": "Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions.",
+        "ref": "Ps 51:1",
+        "translation": "KJV"
+    },
+    {
+        "template": "topic",
+        "$text": "Spiritual Power\nStrength",
+        "verse": "That he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man.",
+        "ref": "Eph 3:16",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Creator",
+        "verse": "He hath made the earth by his power, he hath established the world by his wisdom, and hath stretched out the heavens by his discretion.",
+        "ref": "Jer 10:12",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Loving",
+        "verse": "The LORD thy God in the midst of thee is mighty; he will save, he will rejoice over thee with joy; he will rest in his love, he will joy over thee with singing.",
+        "ref": "Zeph 3:17",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Gracious",
+        "verse": "And therefore will the LORD wait, that he may be gracious unto you, and therefore will he be exalted, that he may have mercy upon you.",
+        "ref": "Isa 30:18",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Just",
+        "verse": "He is the Rock, his work is perfect: for all his ways are judgment: a God of truth and without iniquity, just and right is he.",
+        "ref": "Deut 32:4",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Almighty",
+        "verse": "Thou art the God that doest wonders: thou hast declared thy strength among the people.",
+        "ref": "Ps 77:14",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Righteous",
+        "verse": "Thou art of purer eyes than to behold evil, and canst not look on iniquity.",
+        "ref": "Hab 1:13",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Provider",
+        "verse": "Charge them that are rich in this world, that they be not highminded, nor trust in uncertain riches, but in the living God, who giveth us richly all things to enjoy.",
+        "ref": "1 Tim 6:17",
+        "translation": "KJV"
+    },
+    {
+        "omit": true,
+        "template": "adoration",
+        "$text": "Judge",
+        "verse": "But God is the judge: he putteth down one, and setteth up another.",
+        "ref": "Ps 75:7",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "King",
+        "verse": "And from Jesus Christ, who is the faithful witness, and the first begotten of the dead, and the prince of the kings of the earth.",
+        "ref": "Rev 1:5",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Counselor",
+        "verse": "But the Comforter, which is the Holy Ghost, whom the Father will send in my name, he shall teach you all things.",
+        "ref": "John 14:26",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Omnipresent",
+        "verse": "The eyes of the LORD are in every place, beholding the evil and the good.",
+        "ref": "Prov 15:3",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "All-Knowing",
+        "verse": "Declaring the end from the beginning, and from ancient times the things that are not yet done, saying, My counsel shall stand, and I will do all my pleasure:",
+        "ref": "Isa 46:10",
+        "translation": "KJV"
+    },
+    {
+        "omit": true,
+        "template": "adoration",
+        "$text": "Savior",
+        "verse": "He shall receive the blessing from the LORD, and righteousness from the God of his salvation.",
+        "ref": "Ps 24:5",
+        "translation": "KJV"
+    },
+    {
+        "omit": true,
+        "template": "adoration",
+        "$text": "Jealous",
+        "verse": "For thou shalt worship no other god: for the LORD, whose name is Jealous, is a jealous God:",
+        "ref": "Exod 34:14",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Compassionate",
+        "verse": "The LORD is merciful and gracious, slow to anger, and plenteous in mercy.",
+        "ref": "Ps 103:8",
+        "translation": "KJV"
+    },
+    {
+        "omit": true,
+        "template": "adoration",
+        "$text": "Lord",
+        "verse": "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved.",
+        "ref": "Rom 10:9",
+        "translation": "KJV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Father",
+        "verse": "A father of the fatherless, and a judge of the widows, is God in his holy habitation.",
+        "ref": "Ps 68:5",
+        "translation": "KJV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us, Unto him be glory in the church by Christ Jesus throughout all ages, world without end. Amen.",
+        "ref": "Eph 3:20&ndash;21",
+        "translation": "KJV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+        "ref": "Rom 15:13",
+        "translation": "KJV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Now unto the King eternal, immortal, invisible, the only wise God, be honour and glory for ever and ever. Amen.",
+        "ref": "1 Tim 1:17",
+        "translation": "KJV"
+    },
+    {
+        "template": "benediction",
+        "verse": "And the very God of peace sanctify you wholly; and I pray God your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ. Faithful is he that calleth you, who also will do it.",
+        "ref": "1 Thess 5:23&ndash;24",
+        "translation": "KJV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Now our Lord Jesus Christ himself, and God, even our Father, which hath loved us, and hath given us everlasting consolation and good hope through grace, Comfort your hearts, and stablish you in every good word and work.",
+        "ref": "2 Thess 2:16&ndash;17",
+        "translation": "KJV"
+    },
+    {
+        "template": "benediction",
+        "verse": "O the depth of the riches both of the wisdom and knowledge of God! how unsearchable are his judgments, and his ways past finding out!",
+        "ref": "Rom 11:33",
+        "translation": "KJV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Unto him that loved us, and washed us from our sins in his own blood, And hath made us kings and priests unto God and his Father; to him be glory and dominion for ever and ever. Amen.",
+        "ref": "Rev 1:5&ndash;6",
+        "translation": "KJV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Blessing, and glory, and wisdom, and thanksgiving, and honour, and power, and might, be unto our God for ever and ever. Amen.",
+        "ref": "Rev 7:12",
+        "translation": "KJV"
+    },
+    {
+        "omit": true,
+        "template": "benediction",
+        "verse": "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+        "ref": "Phil 4:7",
+        "translation": "KJV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>person</b> I need to say <b>sorry</b> to,<br/>it is _______.",
+        "prompt2": "Is there any reason <b>not</b> to?",
+        "verse": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+        "ref": "1 John 1:9",
+        "translation": "KJV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>habit</b> I need to <b>change,</b><br/> it is _______.",
+        "prompt2": "How will I start <b>today?</b>",
+        "verse": "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.",
+        "ref": "Rom 8:1",
+        "translation": "KJV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one recent <b>choice</b> I wish I could <b>take back</b>,<br/>it is _______.",
+        "prompt2": "Could I still <b>make it right?</b>",
+        "verse": "But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.",
+        "ref": "Rom 5:8",
+        "translation": "KJV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>doubt</b> that is weakening my <b>faith</b>,<br/>it is _______.",
+        "prompt2": "How can I <b>resolve</b> it?",
+        "verse": "As far as the east is from the west, so far hath he removed our transgressions from us.",
+        "ref": "Ps 103:12",
+        "translation": "KJV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>person</b> who deserves more <b>care</b> from me,<br/>it is _______.",
+        "prompt2": "How can I show <b>love</b>?",
+        "verse": "I, even I, am he that blotteth out thy transgressions for mine own sake, and will not remember thy sins.",
+        "ref": "Isa 43:25",
+        "translation": "KJV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>action</b> I have left <b>undone</b>,<br/>it is _______.",
+        "prompt2": "How can I still <b>do</b> it?",
+        "verse": "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+        "ref": "2 Cor 5:17",
+        "translation": "KJV"
+    }
+]

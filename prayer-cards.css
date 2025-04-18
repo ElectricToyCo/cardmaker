@@ -1,0 +1,212 @@
+:root {
+    --front-border-thickness-total: 3mm;
+    --front-border-thickness-colored: 2.75mm;
+    --back-border-thickness: 6mm;
+    --future-cardcutter-trim-thickness: .04in;
+    --card-base-width: 1.65in;
+    --card-base-height: 2.5in;
+    --card-divider-base-height: calc(var(--card-base-height) + 4mm);
+
+    --landscape-back-right-padding-adjustment: -2mm;
+
+    --font-size-main: 1em;
+    --font-size-main-smaller: 0.9em;
+    --font-size-main-xsmall: 0.7em;
+    --font-size-verse: 0.56em;
+    --font-size-verse-larger: 11pt;
+    --font-size-ref: 1em;
+    --font-size-divider: 1.125em;
+
+    --divider-pattern: repeating-linear-gradient(90deg, #00000040 0, #00000040 12px, transparent 12px, transparent 24px);
+    --divider-pattern-white: repeating-linear-gradient(90deg, #ffffff40 0, #ffffff40 12px, transparent 12px, transparent 24px);
+}
+
+body { margin: 0; padding: 0; font-size: 16pt; }
+
+.card {
+    display: inline-block;
+    margin: 5.2mm;
+    width: calc(var(--card-base-width) - 2*(var(--front-border-thickness-total)) + 2*(var(--future-cardcutter-trim-thickness)));
+    height: calc(var(--card-base-height) - 2*(var(--front-border-thickness-total)) + 2*(var(--future-cardcutter-trim-thickness)));
+    border-radius: var(--front-border-thickness-total);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    overflow: hidden;
+    break-inside: avoid;
+    font-family: Futura;
+}
+
+.card .interior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5mm;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.emoji { font-size: 60pt; text-shadow: 0 0 6px #0000008a; line-height: 1.5; }
+.emoji img { filter: drop-shadow( 0 0 6px #0000008a ); }
+
+.card-text { text-align: center; }
+.card-text p { padding: .35em 0; margin: 0; }
+
+.card-page {
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    left: 0.25in;
+    bottom: 0.25in;
+    font-family: Futura;
+    font-size: 9pt;
+}
+.card-page.card-backs .footer { right: 0.25in; }
+
+
+.card-page, .card-set { break-after: page; }
+.card-page:last-child, .card-set:last-child { break-after: auto; }
+
+.card-page > .interior {
+    margin: 0.25in;
+    height: 10.5in;
+}
+
+.card-fronts { --shadow-thickness: var(--front-border-thickness-colored); }
+
+.card-backs { width: 100%; text-align: right; --shadow-thickness: var(--back-border-thickness); }
+.card-backs .interior { padding-top: 0.5mm; }
+
+.verse { font-family: 'Adobe Garamond Pro'; align-self: end; font-size: var(--font-size-verse); }
+.verse-text { display: inline; font-style: italic; }
+.ref { display: inline-block; align-self: end; font-size: var(--font-size-ref); font-family: 'Adobe Garamond Pro'; font-style: normal; }
+
+.person { font-size: var(--font-size-main); box-shadow: 0 0 0 var(--shadow-thickness) #4a2973, 0 0 0 var(--front-border-thickness-total) black; }
+.person-back { box-shadow: 0 0 0 var(--shadow-thickness) #4a2973; }
+
+.topic { box-shadow: 0 0 0 var(--shadow-thickness) #025d68, 0 0 0 var(--front-border-thickness-total) black; }
+.topic .interior, .adoration .interior { 
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: auto 19mm;
+    height: 100%;
+    box-sizing: border-box;
+}
+.topic .interior .text { font-size: var(--font-size-main-smaller); max-height: 55%; display: flex; justify-content: center; flex: 1; flex-direction: column; text-align: center; }
+.topic-back { box-shadow: 0 0 0 var(--shadow-thickness) #025d68; }
+
+.adoration { box-shadow: 0 0 0 var(--shadow-thickness) #5d235f, 0 0 0 var(--front-border-thickness-total) black; }
+.adoration .interior { grid-template-rows: auto 10mm; }
+.adoration .interior .text { font-size: var(--font-size-main-smaller); max-height: 80%; display: flex; justify-content: center; flex: 1; flex-direction: column; text-align: center; }
+.adoration-back { box-shadow: 0 0 0 var(--shadow-thickness) #5d235f; }
+
+.adoration-context { box-shadow: 0 0 0 var(--shadow-thickness) #b73c2f, 0 0 0 var(--front-border-thickness-total) black; }
+.adoration-context .text { text-align: center; font-size: var(--font-size-main-xsmall); }
+.adoration-context-back { box-shadow: 0 0 0 var(--shadow-thickness) #b73c2f; }
+
+.benediction { box-shadow: 0 0 0 var(--shadow-thickness) #fff9e3, 0 0 0 var(--front-border-thickness-total) black; }
+.benediction .verse { align-self: center; font-size: var(--font-size-verse-larger); }
+.benediction .ref { font-size: var(--font-size-verse); }
+.benediction .interior { display: flex; flex-direction: column; justify-content: space-between; }
+.benediction-back { box-shadow: 0 0 0 var(--shadow-thickness) #fff9e3; }
+
+.confession { box-shadow: 0 0 0 var(--shadow-thickness) #550a0f, 0 0 0 var(--front-border-thickness-total) black; }
+.confession .interior { flex-direction: column; justify-content: space-between; align-items: start; }
+.confession .prompt { font-size: 11pt; }
+.confession .prompt2 { font-size: 9pt; }
+.confession-back { box-shadow: 0 0 0 var(--shadow-thickness) #550a0f; }
+
+.memory .verse { font-size: 12pt; font-style: normal; }
+.memory .ref { align-self: flex-end; font-size: var(--font-size-verse); font-family: 'Adobe Garamond Pro'; font-style: italic; }
+.memory { box-shadow: 0 0 0 var(--shadow-thickness) #05212f, 0 0 0 var(--front-border-thickness-total) black; }
+.memory .interior { flex-direction: column; justify-content: space-between; }
+.memory-back { box-shadow: 0 0 0 var(--shadow-thickness) #05212f; }
+
+.smalltext .verse { font-size: 10pt; }
+
+.divider { 
+    height: calc(var(--card-divider-base-height) - 2*(var(--front-border-thickness-total)) + 2*(var(--future-cardcutter-trim-thickness))); 
+    color: white; 
+    font-size: var(--font-size-divider);
+
+    /* PREBAKED-DIVIDER-BACKS: As with some other backgrounds, the print->PDF process can't handle these complex divider backgrounds,
+    so we've pre-baked them into pngs. The css code remains here, however, commented out in this block and the various
+    .divider-* blocks below. */
+    /* background-size: 50%, 100%, 100%;
+    background-position-y: 66%, center, center; */
+}
+.divider .interior { 
+    display: none; /* PREBAKED-DIVIDER-BACKS: Again, this is here only to temporarily suppress css text while pre-baked pngs are used. */
+    align-items: start; padding-top: 0mm; text-align: center; 
+}
+
+.divider-person .interior::before { content: "People"; }
+.divider-person { 
+    background-image: url( Divider\ Background\ People.png);
+    /* PREBAKED-DIVIDER-BACKS: background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern), linear-gradient(#4145ba,#b0dde4); */
+    box-shadow: 0 0 0 var(--shadow-thickness) #4a2973, 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-persondaily .interior::before { content: "People Daily" }
+.divider-persondaily { 
+    background-image: url( Divider\ Background\ People\ Daily.png );
+    /* PREBAKED-DIVIDER-BACKS: background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern), linear-gradient(rgb(26, 66, 175), rgb(48, 114, 204));  */
+    box-shadow: 0 0 0 var(--shadow-thickness) #3c499f, 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-topic .interior::before { content: "Topics" }
+.divider-topic { 
+    background-image: url( Divider\ Background\ Topics.png );
+    /* PREBAKED-DIVIDER-BACKS: background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern), linear-gradient(rgb(3 152 59),rgb(182 213 98));  */
+    box-shadow: 0 0 0 var(--shadow-thickness) #025d68, 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-adoration .interior::before { content: "Adoration" }
+.divider-adoration { 
+    background-image: url( Divider\ Background\ Adoration.png );
+    /* PREBAKED-DIVIDER-BACKS: background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern), linear-gradient(#892388, #eddfee);  */
+    box-shadow: 0 0 0 var(--shadow-thickness) #5d235f, 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-adorationcontext .interior::before { content: "Context" }
+.divider-adorationcontext { 
+    /* PREBAKED-DIVIDER-BACKS: background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern-white), linear-gradient(rgb(208, 72, 52), rgb(231, 171, 33));  */
+    background-image: url( Divider\ Background\ Adoration\ Contexts.png );
+    box-shadow: 0 0 0 var(--shadow-thickness) #b73c2f, 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-benediction .interior::before { content: "Benediction" }
+.divider-benediction { 
+    /* PREBAKED-DIVIDER-BACKS: background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern-white), linear-gradient(#e35c0c,#f7b21a);  */
+    background-image: url( Divider\ Background\ Benediction.png );
+    box-shadow: 0 0 0 var(--shadow-thickness) #fff9e3, 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-confession .interior::before { content: "Confession" }
+.divider-confession { 
+    /* PREBAKED-DIVIDER-BACKS: background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern), linear-gradient(rgb(208 51 98), rgb(243 187 204));  */
+    background-image: url( Divider\ Background\ Confession.png );
+    box-shadow: 0 0 0 var(--shadow-thickness) #550a0f, 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-extras .interior::before { content: "Extras" }
+.divider-extras { 
+    /* PREBAKED-DIVIDER-BACKS: background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern), linear-gradient(rgb(63,76,80),rgb(132,155,162));  */
+    background-image: url( Divider\ Background\ Extras.png );
+    box-shadow: 0 0 0 var(--shadow-thickness) rgb(68, 76, 79), 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-memory .interior::before { content: "Memory" }
+.divider-memory { 
+    background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern), linear-gradient(#c46022,#05202f); 
+    box-shadow: 0 0 0 var(--shadow-thickness) #05202f, 0 0 0 var(--front-border-thickness-total) black;
+}
+
+.divider-memory-daily .interior::before { content: "Memory Daily" }
+.divider-memory-daily { 
+    background-image: url( Logo\ Full\ Dim.png), var(--divider-pattern), linear-gradient(#e27d40,#2f6f92); 
+    box-shadow: 0 0 0 var(--shadow-thickness) #8d4418, 0 0 0 var(--front-border-thickness-total) black;
+}

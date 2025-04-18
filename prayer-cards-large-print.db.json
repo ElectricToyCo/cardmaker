@@ -1,0 +1,32 @@
+{
+    "db-attribs": {
+        "css": "prayer-cards-large-print.css"
+    },
+    "sets": [
+        {
+            "templates" : "prayer-cards.card-templates.json",
+            "set-attribs" : {
+                "name": "Praying Lots Prayer Cards - Large Print",
+                "page-columns": 3,
+                "page-rows": 2
+            },
+            "append": [
+                "prayer-cards-persons-generic.append.json", 
+                "prayer-cards.append.json", 
+                "prayer-cards-kjv.append.json",
+                "prayer-cards-niv.append.json"
+            ],
+            "cards" : []
+        },
+        {
+            "templates" : "prayer-cards.card-templates.json",
+            "set-attribs" : {
+                "name": "Praying Lots Prayer Card Dividers - Large Print",
+                "page-columns": 3,
+                "page-rows": 1
+            },
+            "append": "prayer-dividers.append.json",
+            "cards" : []
+        }
+    ]
+}

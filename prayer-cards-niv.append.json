@@ -1,0 +1,453 @@
+[
+    {
+        "template": "topic",
+        "$text": "Sin\nRepentance\nForgiveness",
+        "verse": "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness.",
+        "ref": "1 John 1:9",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Thanks",
+        "verse": "Give thanks in all circumstances, for this is God&apos;s will for you in Christ Jesus.",
+        "ref": "1 Thess 5:18",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Finances\nEarthly Blessing",
+        "verse": "You will eat the fruit of your labor; blessings and prosperity will be yours.",
+        "ref": "Ps 128:2",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Work\nCareer",
+        "verse": "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him.",
+        "ref": "Col 3:17",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Emotional Distress and Comfort",
+        "verse": "For just as the sufferings of Christ flow over into our lives, so also through Christ our comfort overflows.",
+        "ref": "2 Cor 1:5",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Encouragement",
+        "verse": "Therefore encourage one another and build each other up, just as in fact you are doing.",
+        "ref": "1 Thess 5:11",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Physical Health",
+        "verse": "Dear friend, I pray that you may enjoy good health and that all may go well with you, even as your soul is getting along well.",
+        "ref": "3 John 2",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Spiritual Maturity",
+        "verse": "Perseverance must finish its work so that you may be mature and complete, not lacking anything.",
+        "ref": "Jas 1:4",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Wisdom",
+        "verse": "Know also that wisdom is sweet to your soul; if you find it, there is a future hope for you, and your hope will not be cut off.",
+        "ref": "Prov 24:14",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Anxiety\nPeace",
+        "verse": "Do not be anxious about anything, but in everything&#8230;present your requests to God. And the peace of God&#8230;will guard your hearts&#8230;",
+        "ref": "Phil 4:6&ndash;7",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Right Desires\nDirection",
+        "verse": "&#8230;Work out your salvation with fear and trembling, for it is God who works in you to will and to act according to his good purpose.",
+        "ref": "Phil 2:12&ndash;13",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Discernment\nGod&apos;s Will",
+        "verse": "He guides the humble in what is right and teaches them his way.",
+        "ref": "Ps 25:9",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Truth\nFaith",
+        "verse": "For this very reason, make every effort to add to your faith goodness; and to goodness, knowledge.",
+        "ref": "2 Pet 1:5",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Friendships",
+        "verse": "A friend loves at all times, and a brother is born for adversity.",
+        "ref": "Prov 17:17",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Family",
+        "verse": "God sets the lonely in families, he leads forth the prisoners with singing; but the rebellious live in a sun-scorched land.",
+        "ref": "Ps 68:6",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Daily Bread",
+        "verse": "Keep falsehood and lies far from me; give me neither poverty nor riches, but give me only my daily bread.",
+        "ref": "Prov 30:8",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Prayers Answered",
+        "verse": "O you who hear prayer, to you all men will come.",
+        "ref": "Ps 65:2",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Fruitfulness",
+        "verse": "You did not choose me, but I chose you and appointed you to go and bear fruit&mdash;fruit that will last.",
+        "ref": "John 15:16",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Joy\nHappiness",
+        "verse": "He prays to God and finds favor with him, he sees God&apos;s face and shouts for joy.",
+        "ref": "Job 33:26",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "What Can I Do To Help?",
+        "verse": "If one of you says to him, &ldquo;Go, I wish you well; keep warm and well fed,&rdquo; but does nothing about his physical needs, what good is it?",
+        "ref": "Jas 2:15&ndash;16",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Salvation",
+        "verse": "He fulfills the desires of those who fear him; he hears their cry and saves them.",
+        "ref": "Ps 145:19",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Preparedness for Judgment",
+        "verse": "Pray that you may be able to escape all that is about to happen, and that you may be able to stand before the Son of Man.",
+        "ref": "Luke 21:36",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Good Works",
+        "verse": "For we are God&apos;s workmanship, created in Christ Jesus to do good works, which God prepared in advance for us to do.",
+        "ref": "Eph 2:10",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Boldness",
+        "verse": "Now, Lord, consider their threats and enable your servants to speak your word with great boldness.",
+        "ref": "Acts 4:29",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Church Family",
+        "verse": "How good and pleasant it is when brothers live together in unity!",
+        "ref": "Ps 133:1",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Spiritual Disciplines",
+        "verse": "Do not let this Book of the Law depart from your mouth; meditate on it day and night, so that you may be careful to do everything written in it.",
+        "ref": "Josh 1:8",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Presence of God",
+        "verse": "The LORD is near to all who call on him, to all who call on him in truth.",
+        "ref": "Ps 145:18",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Knowledge of God&apos;s Grace and Love",
+        "verse": "But grow in the grace and knowledge of our Lord and Savior Jesus Christ.",
+        "ref": "2 Pet 3:18",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Spiritual Protection",
+        "verse": "For our struggle is not against flesh and blood, but against&#8230;the spiritual forces of evil in the heavenly realms.",
+        "ref": "Eph 6:12",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Safety\nProtection",
+        "verse": "Keep me safe, O God, for in you I take refuge.",
+        "ref": "Ps 16:1",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Mercy",
+        "verse": "Have mercy on me, O God, according to your unfailing love; according to your great compassion blot out my transgressions.",
+        "ref": "Ps 51:1",
+        "translation": "NIV"
+    },
+    {
+        "template": "topic",
+        "$text": "Spiritual Power\nStrength",
+        "verse": "I pray that out of his glorious riches he may strengthen you with power through his Spirit in your inner being.",
+        "ref": "Eph 3:16",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Creator",
+        "verse": "But God made the earth by his power; he founded the world by his wisdom and stretched out the heavens by his understanding.",
+        "ref": "Jer 10:12",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Loving",
+        "verse": "He will take great delight in you, he will quiet you with his love, he will rejoice over you with singing.",
+        "ref": "Zeph 3:17",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Gracious",
+        "verse": "Yet the LORD longs to be gracious to you; he rises to show you compassion.",
+        "ref": "Isa 30:18",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Just",
+        "verse": "He is the Rock, his works are perfect, and all his ways are just. A faithful God who does no wrong, upright and just is he.",
+        "ref": "Deut 32:4",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Almighty",
+        "verse": "You are the God who performs miracles; you display your power among the peoples.",
+        "ref": "Ps 77:14",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Righteous",
+        "verse": "Your eyes are too pure to look on evil; you cannot tolerate wrong.",
+        "ref": "Hab 1:13",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Provider",
+        "verse": "&#8230;Put their hope in God, who richly provides us with everything for our enjoyment.",
+        "ref": "1 Tim 6:17",
+        "translation": "NIV"
+    },
+    {
+        "omit": true,
+        "template": "adoration",
+        "$text": "Judge",
+        "verse": "But it is God who judges: He brings one down, he exalts another.",
+        "ref": "Ps 75:7",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "King",
+        "verse": "&#8230;Jesus Christ, who is the faithful witness, the firstborn from the dead, and the ruler of the kings of the earth.",
+        "ref": "Rev 1:5",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Counselor",
+        "verse": "But the Counselor, the Holy Spirit&#8230;will teach you all things and will remind you of everything I have said to you.",
+        "ref": "John 14:26",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Omnipresent",
+        "verse": "The eyes of the LORD are everywhere, keeping watch on the wicked and the good.",
+        "ref": "Prov 15:3",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "All-Knowing",
+        "verse": "I make known the end from the beginning, from ancient times, what is still to come.",
+        "ref": "Isa 46:10",
+        "translation": "NIV"
+    },
+    {
+        "omit": true,
+        "template": "adoration",
+        "$text": "Savior",
+        "verse": "He will receive blessing from the LORD and vindication from God his Savior.",
+        "ref": "Ps 24:5",
+        "translation": "NIV"
+    },
+    {
+        "omit": true,
+        "template": "adoration",
+        "$text": "Jealous",
+        "verse": "Do not worship any other god, for the LORD, whose name is Jealous, is a jealous God.",
+        "ref": "Exod 34:14",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Compassionate",
+        "verse": "The LORD is compassionate and gracious, slow to anger, abounding in love.",
+        "ref": "Ps 103:8",
+        "translation": "NIV"
+    },
+    {
+        "omit": true,
+        "template": "adoration",
+        "$text": "Lord",
+        "verse": "That if you confess with your mouth, &ldquo;Jesus is Lord,&rdquo; and believe in your heart that God raised him from the dead, you will be saved.",
+        "ref": "Rom 10:9",
+        "translation": "NIV"
+    },
+    {
+        "template": "adoration",
+        "$text": "Father",
+        "verse": "A father to the fatherless, a defender of widows, is God in his holy dwelling.",
+        "ref": "Ps 68:5",
+        "translation": "NIV"
+    },
+    {
+        "template": "benediction",
+        "classes": "smalltext",
+        "verse": "Now to him who is able to do immeasurably more than all we ask or imagine, according to his power that is at work within us, to him be glory in the church and in Christ Jesus throughout all generations, for ever and ever! Amen.",
+        "ref": "Eph 3:20&ndash;21",
+        "translation": "NIV"
+    },
+    {
+        "template": "benediction",
+        "verse": "May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit.",
+        "ref": "Rom 15:13",
+        "translation": "NIV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Now to the King eternal, immortal, invisible, the only God, be honor and glory for ever and ever. Amen.",
+        "ref": "1 Tim 1:17",
+        "translation": "NIV"
+    },
+    {
+        "template": "benediction",
+        "verse": "May God himself, the God of peace, sanctify you through and through. May your whole spirit, soul and body be kept blameless at the coming of our Lord Jesus Christ. The one who calls you is faithful and he will do it.",
+        "ref": "1 Thess 5:23&ndash;24",
+        "translation": "NIV"
+    },
+    {
+        "template": "benediction",
+        "verse": "May our Lord Jesus Christ himself and God our Father, who loved us and by his grace gave us eternal encouragement and good hope, encourage your hearts and strengthen you in every good deed and word.",
+        "ref": "2 Thess 2:16&ndash;17",
+        "translation": "NIV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Oh, the depth of the riches of the wisdom and knowledge of God! How unsearchable his judgments, and his paths beyond tracing out!",
+        "ref": "Rom 11:33",
+        "translation": "NIV"
+    },
+    {
+        "template": "benediction",
+        "verse": "To him who loves us and has freed us from our sins by his blood, and has made us to be a kingdom and priests to serve his God and Father&mdash;to him be glory and power for ever and ever! Amen.",
+        "ref": "Rev 1:5&ndash;6",
+        "translation": "NIV"
+    },
+    {
+        "template": "benediction",
+        "verse": "Amen! Praise and glory and wisdom and thanks and honor and power and strength be to our God for ever and ever. Amen!",
+        "ref": "Rev 7:12",
+        "translation": "NIV"
+    },
+    {
+        "omit": true,
+        "template": "benediction",
+        "verse": "And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
+        "ref": "Phil 4:7",
+        "translation": "NIV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>person</b> I need to say <b>sorry</b> to,<br/>it is _______.",
+        "prompt2": "Is there any reason <b>not</b> to?",
+        "verse": "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness.",
+        "ref": "1 John 1:9",
+        "translation": "NIV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>habit</b> I need to <b>change,</b><br/> it is _______.",
+        "prompt2": "How will I start <b>today?</b>",
+        "verse": "Therefore, there is now no condemnation for those who are in Christ Jesus.",
+        "ref": "Rom 8:1",
+        "translation": "NIV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one recent <b>choice</b> I wish I could <b>take back</b>,<br/>it is _______.",
+        "prompt2": "Could I still <b>make it right?</b>",
+        "verse": "But God demonstrates his own love for us in this: While we were still sinners, Christ died for us.",
+        "ref": "Rom 5:8",
+        "translation": "NIV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>doubt</b> that is weakening my <b>faith</b>,<br/>it is _______.",
+        "prompt2": "How can I <b>resolve</b> it?",
+        "verse": "As far as the east is from the west, so far has he removed our transgressions from us.",
+        "ref": "Ps 103:12",
+        "translation": "NIV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>person</b> who deserves more <b>care</b> from me,<br/>it is _______.",
+        "prompt2": "How can I show <b>love</b>?",
+        "verse": "I, even I, am he who blots out your transgressions, for my own sake, and remembers your sins no more.",
+        "ref": "Isa 43:25",
+        "translation": "NIV"
+    },
+    {
+        "template": "confession",
+        "prompt": "If there is one <b>action</b> I have left <b>undone</b>,<br/>it is _______.",
+        "prompt2": "How can I still <b>do</b> it?",
+        "verse": "Therefore, if anyone is in Christ, he is a new creation; the old has gone, the new has come!",
+        "ref": "2 Cor 5:17",
+        "translation": "NIV"
+    }
+  ]

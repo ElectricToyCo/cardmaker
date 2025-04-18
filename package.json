@@ -1,7 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "cardutil": "file:cardutil",
-    "yargs": "^17.6.2"
-  }
-}

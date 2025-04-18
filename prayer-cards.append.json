@@ -1,0 +1,20 @@
+[
+    { "template": "person", "$name": "My Church Family<div class='emoji'>⛪️</div>", "image": "PersonFront.png" },
+    { "template": "person", "$name": "The World<div class='emoji'>🌍</div>", "image": "PersonFront.png" },
+    { "template": "person", "$name": "The Global Church<div class='emoji' style='font-size: 30pt;'>⛪️ 🌍</div>Believers Everywhere", "image": "PersonFront.png" },
+    { "template": "person", "$name": "The Persecuted Church<div class='emoji'><img src='Crown-of-Thorns.png' width='100px' /></div>", "image": "PersonFront.png" },
+    { "template": "person", "$name": "My School<div class='emoji'>🏫</div>", "image": "PersonFront.png" },
+    { "template": "person", "$name": "My Workplace<div class='emoji'>🏢</div>", "image": "PersonFront.png" },
+    { "template": "person", "$name": "Who Have I Been Forgetting?", "image": "PersonFront.png" },
+    
+    { "template": "adoration-context", "text": "&#8230in my life today?" },
+    { "template": "adoration-context", "text": "&#8230in my past?" },
+    { "template": "adoration-context", "text": "&#8230in my future?" },
+    { "omit": true, "template": "adoration-context", "text": "&#8230in the history of Israel?" },
+    { "omit": true, "template": "adoration-context", "text": "&#8230in the New Testament?" },
+    { "template": "adoration-context", "text": "&#8230in the Bible?" },
+    { "omit": true, "template": "adoration-context", "text": "&#8230in human history?" },
+    { "template": "adoration-context", "text": "&#8230in the world today?" },
+    { "template": "adoration-context", "text": "&#8230in my family?" },
+    { "template": "adoration-context", "text": "&#8230in the future of the world?" }
+]

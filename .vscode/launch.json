@@ -7,42 +7,6 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Render Haiku Cards",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/cardmaker.js",
-            "cwd": "/Users/jeffwofford/Documents/Haiku/cards",
-            "args": [
-                "haiku-cards.db.json",
-                "--output", "../renders/haiku-cards.html",
-                "--css", "../css/haiku-cards.css",
-                // "--scripts", "haiku-play.js",
-                "--exclude", "set=retired",
-                "--include", "set=core-rules",
-                "--include", "set=core",
-                "--include", "set=expanded",
-                // "--include", "set=gothic",
-                // "--include", "set=gothic-rules",
-                // "--include", "set=romantic",
-                // "--include", "set=romantic-rules",
-                // "--include", "set=silly",
-                // "--include", "set=christmas",
-                // "--include", "set=christmas-rules",
-                // "--exclude", "set=core-rules",
-                "--no-backs",
-                // "--shuffle",
-                // "--include", "for-testing=true",        // Test
-                // "--max-count", "1",                     // Test
-                "--sort", "set=core-rules,core,expanded,gothic,christmas,romantic,silly",
-                "--sort", "template=blank-word,article,adjective,adverb,noun,verb,stativeverb",
-                "--sort", "syllables",
-                // "--sort", "word",
-            ]
-        },
-        {
-            "type": "node",
-            "request": "launch",
             "name": "Render Prayer Cards",
             "skipFiles": [
                 "<node_internals>/**"

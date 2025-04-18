@@ -1,0 +1,128 @@
+{
+    "person": {
+        "classes": "person {{classes}}",
+        "style": "background-image: url( '{{image}}' );",
+        "content": "{{name}}",
+        "back-template": "person-back"
+    },
+    "person-back": {
+        "classes": "person-back",
+        "style": "background-image: url( 'PersonBack.png' );"
+    },
+    "topic": {
+        "classes": "topic {{classes}}",
+        "style": "background-image: url( 'TopicFront.png' );",
+        "content": "<div class='text'>{{text}}</div><div class='verse'><div class='verse-text'>{{verse}}</div>[[ref? <div class='ref'>({{ref}})</div>]]ref?</div>",
+        "back-template": "topic-back"
+    },
+    "topic-back": {
+        "classes": "topic-back",
+        "style": "background-image: url( 'TopicBack.png' );"
+    },
+    "adoration": {
+        "classes": "adoration {{classes}}",
+        "style": "background-image: url( 'AdorationFront.png' );",
+        "content": "<div class='text'>{{text}}</div><div class='verse'><div class='verse-text'>{{verse}}</div>[[ref? <div class='ref'>({{ref}})</div>]]ref?</div>",
+        "back-template": "adoration-back"
+    },
+    "adoration-back": {
+        "classes": "adoration-back",
+        "style": "background-image: url( 'AdorationBack.png' );"
+    },
+    "adoration-context": {
+        "classes": "adoration-context {{classes}}",
+        "style": "background-image: url( 'AdorationContextFront.png' );",
+        "content": "<div class='text'>{{text}}</div>",
+        "back-template": "adoration-context-back"
+    },
+    "adoration-context-back": {
+        "classes": "adoration-context-back",
+        "style": "background-image: url( 'AdorationContextBack.png' );"
+    },
+    "benediction": {
+        "classes": "benediction {{classes}}",
+        "style": "background-image: url( 'BenedictionFront.png' );",
+        "content": "<div class='verse'>{{verse}}</div>[[ref?<div class='ref'>({{ref}})</div>]]ref?",
+        "back-template": "benediction-back"
+    },
+    "benediction-back": {
+        "classes": "benediction-back",
+        "style": "background-image: url( 'BenedictionBack.png' );"
+    },
+    "confession": {
+        "classes": "confession {{classes}}",
+        "style": "background-image: url( 'ConfessionFront.png' );",
+        "content": "<div class='prompt'>{{prompt}}</div><div class='prompt2'>{{prompt2}}</div><div class='verse'><div class='verse-text'>{{verse}}</div>[[ref? <div class='ref'>({{ref}})</div>]]ref?</div>",
+        "back-template": "confession-back"
+    },
+    "confession-back": {
+        "classes": "confession-back",
+        "style": "background-image: url( 'ConfessionBack.png' );"
+    },
+
+    "memory": {
+        "classes": "memory {{classes}}",
+        "style": "background-image: url( 'MemoryFront.png' );",
+        "content": "<div class='verse'><div class='verse-text'>{{verse}}</div></div>[[ref?<div class='ref'>({{ref}} {{translation}})</div>]]ref?",
+        "back-template": "memory-back"
+    },
+    "memory-back": {
+        "classes": "memory-back",
+        "style": "background-image: url( 'MemoryBack.png' );"
+    },
+
+    "divider": {
+        "classes": "divider {{classes}}"
+    },
+    "divider-adoration": { 
+        "super": "divider",
+        "classes": "divider-adoration",
+        "back-template": "divider-adoration" 
+    },
+    "divider-adorationcontext": { 
+        "super": "divider",
+        "classes": "divider-adorationcontext",
+        "name": "Adoration Context",
+        "back-template": "divider-adorationcontext" 
+    },
+    "divider-person": { 
+        "super": "divider",
+        "classes": "divider-person {{classes}}",
+        "back-template": "divider-person" 
+    },
+    "divider-persondaily": { 
+        "super": "divider-person",
+        "classes": "divider-persondaily",
+        "back-template": "divider-persondaily" 
+    },
+    "divider-topic": { 
+        "super": "divider",
+        "classes": "divider-topic",
+        "back-template": "divider-topic" 
+    },
+    "divider-benediction": { 
+        "super": "divider",
+        "classes": "divider-benediction",
+        "back-template": "divider-benediction" 
+    },
+    "divider-confession": { 
+        "super": "divider",
+        "classes": "divider-confession",
+        "back-template": "divider-confession" 
+    },
+    "divider-extras": { 
+        "super": "divider",
+        "classes": "divider-extras",
+        "back-template": "divider-extras"  
+    },
+    "divider-memory": { 
+        "super": "divider",
+        "classes": "divider-memory {{classes}}",
+        "back-template": "divider-memory"  
+    },
+    "divider-memory-daily": { 
+        "super": "divider-memory",
+        "classes": "divider-memory-daily",
+        "back-template": "divider-memory-daily"  
+    }
+}
