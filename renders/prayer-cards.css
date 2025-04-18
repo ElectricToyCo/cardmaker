@@ -25,10 +25,9 @@ body { margin: 0; padding: 0; font-size: 16pt; }
 
 .card {
     display: inline-block;
-    margin: 5.2mm;
     width: calc(var(--card-base-width) - 2*(var(--front-border-thickness-total)) + 2*(var(--future-cardcutter-trim-thickness)));
     height: calc(var(--card-base-height) - 2*(var(--front-border-thickness-total)) + 2*(var(--future-cardcutter-trim-thickness)));
-    border-radius: var(--front-border-thickness-total);
+    border-radius: 0;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
@@ -54,6 +53,24 @@ body { margin: 0; padding: 0; font-size: 16pt; }
 
 .card-page {
     position: relative;
+}
+
+.card-page > .interior {
+    display: flex;
+    flex-direction: column;
+    gap: 5.5mm;
+}
+
+.page-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5.5mm;
+}
+
+.card-backs .page-row {
+    justify-content: flex-end;
 }
 
 .footer {

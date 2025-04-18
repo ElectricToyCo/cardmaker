@@ -9,7 +9,8 @@
         "append": [
             "prayer-cards-wofford-private.append.json",
             "prayer-cards.append.json", 
-            "prayer-cards-niv.append.json"
+            "prayer-cards-niv.append.json",
+            "prayer-cards-persons-generic.append.json"
         ],
         "cards" : []
     },

@@ -1,8 +1,4 @@
 [
-    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Liam.jpeg" },
-    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Ellie.jpeg" },
-    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Kat.jpeg" },
-    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Celeste.jpeg" },
     { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Mom.jpeg" },
     { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Donna.jpeg" },
     { "private": true, "jeff": false, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Amanda.jpeg" },
@@ -14,11 +10,9 @@
     { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Sarah.jpeg" },
     { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Charnocks.jpeg" },
     { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Daniel.jpeg" },
-    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "USA.jpeg" },
-    { "private": true, "jeff": true, "classes": "has-image", "template": "person", "image": "Kelly.jpeg" },
-    { "private": true, "jeff": true, "classes": "has-image", "template": "person", "image": "Chris.jpeg" },
-    { "private": true, "jeff": true, "classes": "has-image", "template": "person", "image": "Nick.jpeg" },
-    { "private": true, "jeff": true, "classes": "has-image", "template": "person", "image": "WPA.jpeg" },
-    { "private": true, "jeff": true, "classes": "has-image", "template": "person", "image": "Minas.jpeg" },
-    { "private": true, "jeff": true, "classes": "has-image", "template": "person", "image": "Stucke.jpeg" }
+    { "private": true, "jeff": false, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Jeff+Kelly.jpeg" },
+    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Liam.jpeg" },
+    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Ellie.jpeg" },
+    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "Kat.jpeg" },
+    { "private": true, "jeff": true, "mom-dad-nanette": true, "classes": "has-image", "template": "person", "image": "USA.jpeg" }
 ]
